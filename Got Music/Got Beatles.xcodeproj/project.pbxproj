@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B390350283EBAA7001C500F /* Got_MusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B39034F283EBAA7001C500F /* Got_MusicApp.swift */; };
-		0B390352283EBAA7001C500F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B390351283EBAA7001C500F /* ContentView.swift */; };
+		0B390350283EBAA7001C500F /* GotBeatlesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B39034F283EBAA7001C500F /* GotBeatlesApp.swift */; };
 		0B390354283EBAAA001C500F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B390353283EBAAA001C500F /* Assets.xcassets */; };
 		0B390357283EBAAA001C500F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B390356283EBAAA001C500F /* Preview Assets.xcassets */; };
+		0B39035E283EBCDC001C500F /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B39035D283EBCDC001C500F /* Song.swift */; };
+		0B390360283EBE0D001C500F /* SongsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B39035F283EBE0D001C500F /* SongsView.swift */; };
+		0B944A8A283ECBC9000F7418 /* SongsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B944A89283ECBC9000F7418 /* SongsViewModel.swift */; };
+		0B944A8C283ED968000F7418 /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B944A8B283ED968000F7418 /* SongView.swift */; };
+		0B944A8E283EDF97000F7418 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B944A8D283EDF97000F7418 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B39034C283EBAA7001C500F /* Got Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Got Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B39034F283EBAA7001C500F /* Got_MusicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Got_MusicApp.swift; sourceTree = "<group>"; };
-		0B390351283EBAA7001C500F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0B39034C283EBAA7001C500F /* Got Beatles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Got Beatles.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B39034F283EBAA7001C500F /* GotBeatlesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotBeatlesApp.swift; sourceTree = "<group>"; };
 		0B390353283EBAAA001C500F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B390356283EBAAA001C500F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0B39035D283EBCDC001C500F /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		0B39035F283EBE0D001C500F /* SongsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsView.swift; sourceTree = "<group>"; };
+		0B944A89283ECBC9000F7418 /* SongsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewModel.swift; sourceTree = "<group>"; };
+		0B944A8B283ED968000F7418 /* SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
+		0B944A8D283EDF97000F7418 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +43,7 @@
 		0B390343283EBAA7001C500F = {
 			isa = PBXGroup;
 			children = (
-				0B39034E283EBAA7001C500F /* Got Music */,
+				0B39034E283EBAA7001C500F /* Got Beatles */,
 				0B39034D283EBAA7001C500F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,20 +51,22 @@
 		0B39034D283EBAA7001C500F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0B39034C283EBAA7001C500F /* Got Music.app */,
+				0B39034C283EBAA7001C500F /* Got Beatles.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0B39034E283EBAA7001C500F /* Got Music */ = {
+		0B39034E283EBAA7001C500F /* Got Beatles */ = {
 			isa = PBXGroup;
 			children = (
-				0B39034F283EBAA7001C500F /* Got_MusicApp.swift */,
-				0B390351283EBAA7001C500F /* ContentView.swift */,
+				0B39034F283EBAA7001C500F /* GotBeatlesApp.swift */,
+				0B944A86283ECB67000F7418 /* Models */,
+				0B944A87283ECB71000F7418 /* Views */,
+				0B944A88283ECB92000F7418 /* ViewModel */,
 				0B390353283EBAAA001C500F /* Assets.xcassets */,
 				0B390355283EBAAA001C500F /* Preview Content */,
 			);
-			path = "Got Music";
+			path = "Got Beatles";
 			sourceTree = "<group>";
 		};
 		0B390355283EBAAA001C500F /* Preview Content */ = {
@@ -67,12 +77,38 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		0B944A86283ECB67000F7418 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0B39035D283EBCDC001C500F /* Song.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0B944A87283ECB71000F7418 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0B39035F283EBE0D001C500F /* SongsView.swift */,
+				0B944A8B283ED968000F7418 /* SongView.swift */,
+				0B944A8D283EDF97000F7418 /* WebView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0B944A88283ECB92000F7418 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0B944A89283ECBC9000F7418 /* SongsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0B39034B283EBAA7001C500F /* Got Music */ = {
+		0B39034B283EBAA7001C500F /* Got Beatles */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0B39035A283EBAAA001C500F /* Build configuration list for PBXNativeTarget "Got Music" */;
+			buildConfigurationList = 0B39035A283EBAAA001C500F /* Build configuration list for PBXNativeTarget "Got Beatles" */;
 			buildPhases = (
 				0B390348283EBAA7001C500F /* Sources */,
 				0B390349283EBAA7001C500F /* Frameworks */,
@@ -82,9 +118,9 @@
 			);
 			dependencies = (
 			);
-			name = "Got Music";
+			name = "Got Beatles";
 			productName = "Got Music";
-			productReference = 0B39034C283EBAA7001C500F /* Got Music.app */;
+			productReference = 0B39034C283EBAA7001C500F /* Got Beatles.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +138,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0B390347283EBAA7001C500F /* Build configuration list for PBXProject "Got Music" */;
+			buildConfigurationList = 0B390347283EBAA7001C500F /* Build configuration list for PBXProject "Got Beatles" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +151,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0B39034B283EBAA7001C500F /* Got Music */,
+				0B39034B283EBAA7001C500F /* Got Beatles */,
 			);
 		};
 /* End PBXProject section */
@@ -137,8 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B390352283EBAA7001C500F /* ContentView.swift in Sources */,
-				0B390350283EBAA7001C500F /* Got_MusicApp.swift in Sources */,
+				0B39035E283EBCDC001C500F /* Song.swift in Sources */,
+				0B390350283EBAA7001C500F /* GotBeatlesApp.swift in Sources */,
+				0B944A8C283ED968000F7418 /* SongView.swift in Sources */,
+				0B944A8E283EDF97000F7418 /* WebView.swift in Sources */,
+				0B390360283EBE0D001C500F /* SongsView.swift in Sources */,
+				0B944A8A283ECBC9000F7418 /* SongsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +306,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Got Music/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Got Beatles/Preview Content\"";
 				DEVELOPMENT_TEAM = M96XHZRD2T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -279,9 +319,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.thunderboltfox.Got-Music";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thunderboltfox.GotBeatles;
+				PRODUCT_NAME = "Got Beatles";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -295,7 +335,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Got Music/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Got Beatles/Preview Content\"";
 				DEVELOPMENT_TEAM = M96XHZRD2T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -308,9 +348,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.thunderboltfox.Got-Music";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thunderboltfox.GotBeatles;
+				PRODUCT_NAME = "Got Beatles";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -320,7 +360,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0B390347283EBAA7001C500F /* Build configuration list for PBXProject "Got Music" */ = {
+		0B390347283EBAA7001C500F /* Build configuration list for PBXProject "Got Beatles" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0B390358283EBAAA001C500F /* Debug */,
@@ -329,7 +369,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0B39035A283EBAAA001C500F /* Build configuration list for PBXNativeTarget "Got Music" */ = {
+		0B39035A283EBAAA001C500F /* Build configuration list for PBXNativeTarget "Got Beatles" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0B39035B283EBAAA001C500F /* Debug */,

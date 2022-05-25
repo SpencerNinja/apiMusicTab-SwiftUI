@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/spencerhurd/Sources/iOS/apiMusicTab-SwiftUI/Got Music/Got Beatles.xcodeproj">
    </FileRef>
 </Workspace>
