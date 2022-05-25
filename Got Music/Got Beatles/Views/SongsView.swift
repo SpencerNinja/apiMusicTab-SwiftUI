@@ -20,8 +20,6 @@ struct SongsView: View {
             NavigationView {
                 VStack {
                     Text("Got Beatles")
-                    Text("Pick an instrument")
-                    selectInstrument
                     Text("Pick a song")
                     listOfSongs
                 }
@@ -31,29 +29,6 @@ struct SongsView: View {
 }
 
 extension SongsView {
-    
-    var selectInstrument: some View {
-        HStack {
-            Button(action: {
-                songsVM.selectedInstrument = "tabs"
-                print("selectedInstrument = \(songsVM.selectedInstrument)")
-            }, label: {
-                Text("Guitar Tabs")
-            })
-            Button(action: {
-                songsVM.selectedInstrument = "chords"
-                print("selectedInstrument = \(songsVM.selectedInstrument)")
-            }, label: {
-                Text("Guitar Chords")
-            })
-            Button(action: {
-                songsVM.selectedInstrument = "bass"
-                print("selectedInstrument = \(songsVM.selectedInstrument)")
-            }, label: {
-                Text("Bass")
-            })
-        }
-    }
     
     var listOfSongs: some View {
         List(songs) { song in

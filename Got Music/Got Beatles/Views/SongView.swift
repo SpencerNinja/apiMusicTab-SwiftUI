@@ -13,7 +13,9 @@ struct SongView: View {
     @State private var songs = [Song]()
     
     var body: some View {
-        WebView(url: URL(string: "http://www.songsterr.com/a/wa/song?id=\(songsVM.songId)")!)
+        WebView(
+            url: URL(string: "http://www.songsterr.com/a/wa/song?id=\(songsVM.songId)")!
+        )
     }
 }
 

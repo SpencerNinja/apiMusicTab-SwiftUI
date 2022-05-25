@@ -9,7 +9,6 @@ import Foundation
 
 class SongsViewModel : ObservableObject{
     @Published var songs = [Song]()
-    @Published var selectedInstrument = "tabs"
     @Published var songId = 0
     
     func loadData(completion:@escaping ([Song]) -> ()) {
