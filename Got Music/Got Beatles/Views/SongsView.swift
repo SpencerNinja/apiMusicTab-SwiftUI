@@ -15,11 +15,16 @@ struct SongsView: View {
     var body: some View {
         ZStack {
             // background
+            Color.black
+                .ignoresSafeArea()
             
             // content
             NavigationView {
                 VStack {
                     Text("Got Beatles")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .italic()
                     Text("Pick a song")
                     listOfSongs
                 }
