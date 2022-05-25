@@ -9,45 +9,70 @@ import SwiftUI
 
 struct SongsView: View {
     
-    @State var songs = [Song]()
+    @EnvironmentObject var songsVM: SongsViewModel
+    @State private var songs = [Song]()
     
     var body: some View {
         ZStack {
             // background
             
             // content
-            VStack {
-                Text("Title")
-                Text("Pick an instrument")
-                HStack {
-                    Button(action: {
-                        
-                    }, label: {
-                        Text("Guitar")
-                    })
-                    Button(action: {
-                        
-                    }, label: {
-                        Text("Bass")
-                    })
-                    Button(action: {
-                        
-                    }, label: {
-                        Text("Drums")
-                    })
+            NavigationView {
+                VStack {
+                    Text("Got Beatles")
+                    Text("Pick an instrument")
+                    selectInstrument
+                    Text("Pick a song")
+                    listOfSongs
                 }
-                Text("Pick a song")
-                List(songs) { song in
-                    Text("\(song.title)")
-                }
-                .onAppear() {
-                    SongApi().loadData { (songs) in
-                        self.songs = songs
-                    }
-                }.navigationTitle("Music List")
             }
         }
     }
+}
+
+extension SongsView {
+    
+    var selectInstrument: some View {
+        HStack {
+            Button(action: {
+                songsVM.selectedInstrument = "tabs"
+                print("selectedInstrument = \(songsVM.selectedInstrument)")
+            }, label: {
+                Text("Guitar Tabs")
+            })
+            Button(action: {
+                songsVM.selectedInstrument = "chords"
+                print("selectedInstrument = \(songsVM.selectedInstrument)")
+            }, label: {
+                Text("Guitar Chords")
+            })
+            Button(action: {
+                songsVM.selectedInstrument = "bass"
+                print("selectedInstrument = \(songsVM.selectedInstrument)")
+            }, label: {
+                Text("Bass")
+            })
+        }
+    }
+    
+    var listOfSongs: some View {
+        List(songs) { song in
+            NavigationLink(
+                destination: SongView().onAppear {
+                    songsVM.songId = song.id
+                }) {
+                Text("\(song.title)")
+                }
+            }
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
+        .onAppear() {
+            SongsViewModel().loadData { (songs) in
+                self.songs = songs
+            }
+        }
+    }
+    
 }
 
 struct SongsView_Previews: PreviewProvider {

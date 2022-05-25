@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct GotBeatlesApp: App {
+    
+    @StateObject var songAPI: SongsViewModel = SongsViewModel()
+    
     var body: some Scene {
         WindowGroup {
             SongsView()
+                .environmentObject(songAPI)
         }
+        
     }
 }

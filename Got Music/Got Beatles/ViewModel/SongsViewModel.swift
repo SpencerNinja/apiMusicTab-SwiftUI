@@ -7,8 +7,10 @@
 
 import Foundation
 
-class SongApi : ObservableObject{
+class SongsViewModel : ObservableObject{
     @Published var songs = [Song]()
+    @Published var selectedInstrument = "tabs"
+    @Published var songId = 0
     
     func loadData(completion:@escaping ([Song]) -> ()) {
         guard let url = URL(string: "https://www.songsterr.com/a/ra/songs.json?pattern=Beatles") else {
