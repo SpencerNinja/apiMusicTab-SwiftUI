@@ -26,3 +26,7 @@ class SongsViewModel : ObservableObject{
         
     }
 }
+
+
+// TODO: async await
+
