@@ -10,11 +10,16 @@ import SwiftUI
 struct SongView: View {
     
     @EnvironmentObject var songsVM: SongsViewModel
-    @State private var songs = [Song]()
     
     var body: some View {
         WebView(
             url: URL(string: "http://www.songsterr.com/a/wa/song?id=\(songsVM.songId)")!
+        )
+        .background(
+            Image("pexels-922690-lukas-rychvalsky")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
         )
     }
 }
@@ -22,5 +27,6 @@ struct SongView: View {
 struct SongView_Previews: PreviewProvider {
     static var previews: some View {
         SongView()
+            .environmentObject(SongsViewModel())
     }
 }

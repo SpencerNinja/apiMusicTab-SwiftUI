@@ -17,6 +17,11 @@ struct GotBeatlesApp: App {
             SongsView()
                 .environmentObject(songAPI)
         }
-        
     }
 }
+
+/**
+ Source of photo: https://www.pexels.com/photo/photo-of-roadway-cross-between-buildings-922690/
+ 
+ API source: https://www.songsterr.com/a/wa/api/?ref=apilist.fun
+ */
